@@ -73,6 +73,10 @@ public class RMAuditLogger {
     public static final String UNREGISTER_AM = "Unregister App Master";
     public static final String ALLOC_CONTAINER = "AM Allocated Container";
     public static final String RELEASE_CONTAINER = "AM Released Container";
+
+    // Node state transitions
+    public static final String NODE_STATE_TRANSITION = "Node State Transition";
+
     public static final String UPDATE_APP_PRIORITY =
         "Update Application Priority";
     public static final String UPDATE_APP_TIMEOUTS =
@@ -145,7 +149,7 @@ public class RMAuditLogger {
     }
     return b.toString();
   }
-  
+   
   private static void appendCallerContext(StringBuilder sb, CallerContext callerContext) {
     String context = null;
     byte[] signature = null;
